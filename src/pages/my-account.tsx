@@ -1,10 +1,6 @@
-import { Session } from 'next-auth'
-import { signIn, signOut, useSession } from 'next-auth/client'
 import User from '../components/User'
-
-interface MyAccountProps {
-  session: Session
-}
+import routes from '../routes/routes'
+import { signIn, useSession } from 'next-auth/client'
 
 export default function MyAccount() {
   const [session] = useSession()
@@ -18,5 +14,10 @@ export default function MyAccount() {
       </div>
     )
   }
-  return <User />
+  return (
+    <div>
+      <h1>{routes.myAccount.title}</h1>
+      <User />
+    </div>
+  )
 }

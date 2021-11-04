@@ -12,7 +12,8 @@ export default function MyAccount() {
   if (!session) {
     return (
       <div>
-        <h1>You are not logged</h1>
+        <h1>My account</h1>
+        <h2>You are not logged</h2>
         <button onClick={() => signIn()}>Sign in</button>
       </div>
     )
